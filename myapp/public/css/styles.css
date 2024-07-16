@@ -64,7 +64,7 @@ body, html {
 .subheading {
     display: flex;
     flex-direction: row;
-    size: 12px;
+    font-size: 12px;
 }
 
 .container {
