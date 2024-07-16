@@ -6,22 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bradley Watson</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="scripts.js"></script>
 </head>
 
 <body>
-    <div class="sidebar">
-        <div class="sidebarcontainer">
+    <div class="loading-bar-container" id="loading-bar-container">
+        <div class="loading-bar" id="loading-bar"></div>
+    </div>
+    <div class="background"></div>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebarbtn" id="sidebarbtn">&times;</div>
             <div class="sidebarname">
-                <img src="" alt="Bradley Watson">
+                <img src="https://via.placeholder.com/50" alt="Bradley Watson" class="profile-img">
+                <span>Bradley Watson</span>
             </div>
             <div class="sidebarnav">
-                <p> <a href="Home.html">Home</a></p>
-                <p> <a href="About.html">About</a></p>
-                <p> <a href="Projects.html">Projects</a></p>
-                <p> <a href="Contact.html">Contac</a></p>
+                <p class="navlink"><a href="Home.html"><i class="fas fa-home"></i><span> Home</span></a></p>
+                <p class="navlink"><a href="About.html"><i class="fas fa-user"></i><span> About</span></a></p>
+                <p class="navlink"><a href="Projects.html"><i class="fas fa-briefcase"></i><span> Projects</span></a></p>
+                <p class="navlink"><a href="Contact.html"><i class="fas fa-envelope"></i><span> Contact</span></a></p>
             </div>
             <div class="sidebarsettings">
-                <p> <a href="Settings.html">Settings</a></p>
+                <p><i class="fas fa-cog"></i><span> Settings</span></p>
+            </div>
+            <div class="settingsmenu">
+                <p>Dark Mode</p>
+                <p>Light Mode</p>
+            </div>
+        </div>
+        <div class="content" id="content">
+            <div class="contentname">
+                <h1 class="intro">Hi,<br> I'm Bradley Watson</h1>
+            </div>
+            <div class="contenttext">
+                <p>Hi, I'm Bradley Watson. I'm a software developer and I'm currently studying at the University of Technology Sydney. I'm passionate about technology and I'm always looking for new ways to learn and improve my skills. I'm currently working on a number of projects and I'm always looking for new opportunities to collaborate with other developers. If you're interested in working with me, feel free to get in touch!</p>
+            </div>
+            <div class="contentprojects">
+                <h2>Projects</h2>
+                <p>Here are some of the projects I'm currently working on:</p>
+                <ul>
+                    <li>Project 1</li>
+                    <li>Project 2</li>
+                    <li>Project 3</li>
+                </ul>
+            </div>
+            <div class="contentcontact">
+                <h2>Contact</h2>
+                <p>If you're interested in working with me, feel free to get in touch!</p>
+                <p>Email:</p>
+                <p>Phone:</p>
             </div>
         </div>
     </div>
