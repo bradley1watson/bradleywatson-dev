@@ -1,194 +1,216 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .loading-bar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
 .loading-bar {
-    width: 50%;
-    height: 10px;
-    background-color: #3498db;
-    border-radius: 5px;
-    animation: loading 2s linear infinite;
+  width: 50%;
+  height: 10px;
+  background-color: #3498db;
+  border-radius: 5px;
+  animation: loading 2s linear infinite;
 }
 
 @keyframes loading {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 50%;
-    }
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
 }
 
 .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHlicXh4YzYweG0zdzlvcDVwZm44N3cwcXRrZ2R4bGxtdTM2bDNvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ko7twHhomhk8E/giphy.gif');
-    background-size: cover;
-    filter: blur(10px);
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHlicXh4YzYweG0zdzlvcDVwZm44N3cwcXRrZ2R4bGxtdTM2bDNvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ko7twHhomhk8E/giphy.gif");
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -1;
 }
 
 .background::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 .subheading {
-    display: flex;
-    flex-direction: row;
-    font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
 }
 
 .container {
-    display: flex;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.repeatercontainer {
+    display: flex; /* This line is crucial for enabling flexbox layout */
+    overflow: hidden; 
+    flex-direction: row; /* This ensures that the children (repeaters) are laid out in a row */
+    gap: 5px;
+}
+
+.repeater {
+    background-color: #1e4c72;
+    max-width: fit-content;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .sidebar {
-    width: 500px;
-    height: 100%;
-    transition: width 0.5s;
-    background: linear-gradient(180deg, #1a1a1a 0%, #646464 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: left;
-    padding-top: 30px;
-    padding-left: 30px;
-    position: relative;
-    color: white;
+  width: 500px;
+  height: 100%;
+  transition: width 0.5s;
+  background: linear-gradient(180deg, #1a1a1a 0%, #646464 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  padding-top: 30px;
+  padding-left: 15px;
+  position: relative;
+  color: white;
 }
 
 .sidebar.collapsed {
-    width: 100px;
+  width: 70px;
 }
 
 .sidebarbtn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #6b6b6b;
-    transition: right 0.5s;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6b6b6b;
+  transition: right 0.5s;
 }
 
 .sidebar.collapsed .sidebarbtn {
-    right: 10px;
+  right: 10px;
 }
 
 .sidebarname {
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
 }
 
 .profile-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: #1e4c72 5px solid;
-    margin-right: 10px;
+  width: 30px;
+  height:30px;
+  border-radius: 50%;
+  border: #1e4c72 3px solid;
 }
 
 .sidebar.collapsed .sidebarname span {
-    display: none;
+  display: none;
 }
 
 .sidebarnav a {
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
 }
 
 .sidebarnav i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .sidebar.collapsed .sidebarnav span {
-    display: none;
+  display: none;
 }
 
 .navlink:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .sidebarsettings {
-    display: flex;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: white;
-    padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: white;
+  padding-bottom: 40px;
 }
 
 .sidebarsettings i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .sidebar.collapsed .sidebarsettings span {
-    display: none;
+  display: none;
 }
 
 .settingsmenu {
-    display: none;
-    position: absolute;
+  display: none;
+  position: absolute;
 }
 
 .settingsmenu.open {
-    display: block;
+  display: block;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .content {
-    flex-grow: 1;
-    padding: 20px;
-    color: rgb(255, 255, 255);
-    transition: margin-left 0.5s; /* Smooth transition for content */
-    overflow-y: auto; /* Allow scrolling if content overflows */
-    margin-left: 50px; /* Default margin when sidebar is expanded */
+  flex-grow: 1;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  transition: margin-left 0.5s; /* Smooth transition for content */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  margin-left: 50px; /* Default margin when sidebar is expanded */
+}
+
+.contentcontact {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 500px;
 }
 
 .sidebar.collapsed + .content {
-    margin-left: 100px; /* Adjust margin when sidebar is collapsed */
+  margin-left: 100px; /* Adjust margin when sidebar is collapsed */
 }
 
 .intro {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100px;
-    color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  color: white;
 }

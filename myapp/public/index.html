@@ -79,19 +79,45 @@
         <div class="contentprojects">
           <h2>Projects</h2>
           <p>Here are some of the projects I'm currently working on:</p>
-          <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-          </ul>
+          <div class="repeatercontainer">
+            <div class="repeater">
+              <div class="repeatername">
+                <h3>Project 1</h3>
+              </div>
+              <div class="repeaterdescription">
+                <p>This is a description of the project.</p>
+              </div>
+            </div>
+            <div class="repeater">
+              <div class="repeatername">
+                <h3>Project 1</h3>
+              </div>
+              <div class="repeaterdescription">
+                <p>This is a description of the project.</p>
+              </div>
+            </div>
+            <div class="repeater">
+              <div class="repeatername">
+                <h3>Project 1</h3>
+              </div>
+              <div class="repeaterdescription">
+                <p>This is a description of the project.</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="contentcontact">
-          <h2>Contact</h2>
-          <p>
-            If you're interested in working with me, feel free to get in touch!
-          </p>
-          <p>Email:</p>
-          <p>Phone:</p>
+          <div class="contentcontact">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Submit</button>
+          </div>
         </div>
       </div>
     </div>
